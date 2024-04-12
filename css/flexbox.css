@@ -1,0 +1,158 @@
+/* CABEÇALHO */
+.cabecalho__container {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+}
+
+/* MENU LATERAL */
+.menu__container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 74px;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    /* align-items: center; */
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+/* SEÇÂO SUPERIOR */
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    gap: 15px;
+}
+
+/* VIDEOS */
+.videos__container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    margin: 50px 90px;
+}
+.videos__item {
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+
+/* RODAPÉ */
+.rodape__container {
+    display: flex;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+}
+
+@media (min-width: 834px) {
+
+    /* CABEÇALHO */
+    .cabecalho__pesquisar__item {
+        display: block;
+    }
+
+    /* MENU LATERAL */
+    .menu__container {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 74px;
+        height: 100%;
+    }
+
+    .menu__lista {
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-start;
+        gap: 40px;
+    }
+
+    .menu__itens {
+        gap: 10px;
+    }
+
+    /* RODAPÉ */
+    .rodape__container {
+        justify-content: space-between;
+
+    }
+}
+
+@media (min-width: 1400px) {
+
+    /* MENU LATERAL */
+    .menu__container {
+        width: 250px;
+        overflow-y: auto;
+        max-height: calc(100% - 80px);
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+        display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        align-items: center;
+        height: 45px;
+        gap: 15px;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .jogos {
+        order: 4;
+    }
+
+    .filmes {
+        order: 3;
+    }
+
+    .premium {
+        order: 2;
+    }
+
+    .maispagina{
+        order: 1;
+    }
+}
